@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+.purplefont{
+    color:purple
+}
+
+body{
+    background-image: url("/assets/Pattern.svg");
+}
+
+
+.btnbackgnd{
+    background-color:#f4f4f4 !important;
+    cursor: pointer;
+    width:19em !important; 
+    font-weight: 600 !important;
+}
+
+.main {
+    width: 50%;
+    margin: 50px auto;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.card{
+    width:20em;
+    display: inline-block !important;
+    cursor: pointer;
+}
+
+.ui-card-title {
+    font-size: 1.25em !important;
+}
+
+.search-results {
+    height: 20rem;
+    overflow-y: scroll;
+  }
