@@ -1,0 +1,41 @@
+<div class="col-md-12">
+
+    <div class="offset-md-1 offset-2">
+
+            <h2 class="purplefont">
+                <span class="mr-2" (click)="gotohome()">
+                    <img src="assets/Back.svg" width="25px" height="20px" />
+                </span>
+                {{genName}}
+            </h2>
+    </div>
+
+    <div class="main">
+        <div class="form-group has-search">
+            <span class="pi pi-search form-control-feedback"></span>
+            <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchText"
+                (keyup)="$event.keyCode == 13 ? filter() : null">
+        </div>
+    </div>
+
+
+    <div infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="10" (scrolled)="onScroll()">
+        <div class="row">
+            <div *ngFor="let gen of genreFinalArr" class="col-md-3 mt-3 text-center">
+                <p-card class="card" header={{gen.title}} [style]="{height: '250px'}" styleClass="ui-card-shadow"
+                    (click)="openBook(gen)">
+                    <!-- <p-header>
+                    <img  src={{gen.formats[application/x-mobipocket-ebook]}} />
+                </p-header> -->
+
+                    <p-footer>
+                        Authors :
+                        <span *ngFor="let auth of gen.authors;let i=index"> {{auth.name}}
+                            <span *ngIf="i>(gen.authors.length-1)">,</span>
+                        </span>
+                    </p-footer>
+                </p-card>
+            </div>
+        </div>
+    </div>
+</div>

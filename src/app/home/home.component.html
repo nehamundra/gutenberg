@@ -1,0 +1,12 @@
+<div class="m-1">
+    <div class="row ">
+        <div class="col-md-6 col-12 p-2 text-center " *ngFor="let gen of genArr">
+            <div class="btnbackgnd p-2 offset-md-3 offset-2" (click)="gotoGenre(gen)">
+                <span class="float-left">
+                    <img src={{gen.img}} width="25px" height="20px"></span>
+                <span class="m-1">{{gen.name| uppercase}}</span>
+                <span class="float-right"><img src="assets/Next.svg" width="20px" height="18px"/></span>
+            </div>
+        </div>
+    </div>
+</div>
